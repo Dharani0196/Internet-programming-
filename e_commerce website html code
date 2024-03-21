@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Grocery Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 50px auto;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #4a076e6d;
+            border-radius: 5px;
+            background-color: #0b89902c;
+        }
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #7f6b6ba8;
+        }
+        .container input[type="submit"] {
+            background-color: #098e0ee3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .container input[type="submit"]:hover {
+            background-color: #b693da88;
+        }
+        .product-container {
+            margin: 20px auto;
+            width: 80%;
+        }
+        .product {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #1b845d89;
+            border-radius: 5px;
+            background-color: #34290c39;
+        }
+        .product h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+        .product p {
+            margin: 5px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="login-page">
+        <h2>Login</h2>
+        <form action="#" method="POST" id="login-form">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <div class="product-container" id="products-page" style="display:none;">
+        <div class="product">
+            <h2>Fruits</h2>
+            <p>Apple - $2 per kg</p>
+            <p>Banana - $1 per kg</p>
+            <p>Orange - $1.50 per kg</p>
+            <p>mango - $1.32 per kg</p>
+            <p>sapota - $1.11 per kg</p>
+            <!-- Add more fruits as needed -->
+        </div>
+        <div class="product">
+            <h2>Vegetables</h2>
+            <p>Carrot - $1 per kg</p>
+            <p>Tomato - $1.50 per kg</p>
+            <p>Spinach - $2 per kg</p>
+            <p>potato - $2 per kg</p>
+            <p>chilly - $3 per kg</p>
+            <!-- Add more vegetables as needed -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (username === "chandan357" && password === "123456") {
+                document.getElementById('login-page').style.display = 'none';
+                document.getElementById('products-page').style.display = 'block';
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
